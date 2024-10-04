@@ -164,7 +164,7 @@ Inside both ```train/``` and ```test/``` folders, there is a ```metadata.jsonl``
 ![arch](figs/playground3.png)
 
 ## Model Training
-For training, you can make a training configuration file ```your_train_config.json``` and we provide a training configuration template [here](https://github.com/PeterGriffinJin/InstructG2I/config/).
+For training, you can make a training configuration file ```your_train_config.json``` and we provide a training configuration template [here](https://github.com/PeterGriffinJin/InstructG2I/blob/main/config/train_template.json).
 
 ```
 accelerate launch --mixed_precision="fp16" \
@@ -185,7 +185,7 @@ accelerate launch --mixed_precision="fp16" \
 ```
 
 ## Model Testing
-For quantitative evaluation of the InstructG2I model, you can specify a testing configuration file ```your_test_config.json``` and we provide a testing configuration template [here](https://github.com/PeterGriffinJin/InstructG2I/config/).
+For quantitative evaluation of the InstructG2I model, you can specify a testing configuration file ```your_test_config.json``` and we provide a testing configuration template [here](https://github.com/PeterGriffinJin/InstructG2I/blob/main/config/test_template.json).
 
 ```
 python -m instructg2i.test --config config/your_test_config.json
