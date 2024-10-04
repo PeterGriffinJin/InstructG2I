@@ -37,7 +37,7 @@ pip install -e .
 
 ## Quick Start
 
-Generate a picture called *a mountain in the blue sky* under Claude Monet's style.
+Generate a picture called *a mountain in the blue sky* under Claude Monet's style <img src="figs/artist.svg" width="30" height="30" />.
 
 ```
 import os
@@ -58,7 +58,7 @@ image_gen.show()
 ![arch](figs/example.png)
 
 
-Generate a picture called *a house in the snow* combining the style of Claude Monet and my little brother <img src="figs/baby.svg" width="30" height="30" />.
+Generate a picture called *a house in the snow* combining the style of Claude Monet <img src="figs/artist.svg" width="30" height="30" /> and my little brother <img src="figs/baby.svg" width="30" height="30" />.
 ```
 import os
 from PIL import Image
