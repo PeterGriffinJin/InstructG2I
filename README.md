@@ -27,7 +27,7 @@ Finally, we propose graph classifier-free guidance, enabling controllable genera
 - [Citations](#citations)
 
 ## Installation
-```
+```bash
 conda create --name instructg2i python==3.10
 conda activate instructg2i
 
@@ -40,7 +40,7 @@ pip install -e .
 
 Generate a picture called *a mountain in the blue sky* under Claude Monet's style <img src="figs/artist.svg" width="30" height="30" />.
 
-```
+```python
 import os
 from PIL import Image
 from instructg2i import InstructG2IPipeline, get_neighbor_transforms
@@ -62,7 +62,7 @@ image_gen.show()
 </div>
 
 Generate a picture called *a house in the snow* combining the style of Claude Monet <img src="figs/artist.svg" width="30" height="30" /> and my little brother <img src="figs/baby.svg" width="30" height="30" />.
-```
+```python
 import os
 from PIL import Image
 from instructg2i import image_grid, InstructG2IMultiGuidePipeline, get_neighbor_transforms
@@ -114,7 +114,7 @@ Create an image_encoder folder by ```mkdir image_encoder```, then place the file
 
 The virtual artist InstructG2I checkpoint which is trained on Artwork graphs can be downloaded [here](https://drive.google.com/drive/folders/1ntmPgZXmb-M-k5M0Cnh34p0fxoeKnnYC?usp=sharing) or [here](https://huggingface.co/PeterJinGo/VirtualArtist).
 
-```
+```python
 from huggingface_hub import snapshot_download
 snapshot_download(repo_id="PeterJinGo/VirtualArtist", local_dir=your_local_path)
 ```
@@ -137,7 +137,7 @@ $CODE_DIR
 ```
 
 Inside both ```train/``` and ```test/``` folders, there is a ```metadata.jsonl``` file which indicates the training/testing data samples. Each row correspond to one data sample in a dictionary format:
-```
+```json
 {
     "center": "1934325.jpg", 
     "text": "The Way to Dusty Death", 
@@ -180,7 +180,7 @@ Inside both ```train/``` and ```test/``` folders, there is a ```metadata.jsonl``
 ## Model Training
 For training, you can make a training configuration file ```your_train_config.json``` and we provide a training configuration template [here](https://github.com/PeterGriffinJin/InstructG2I/blob/main/config/train_template.json).
 
-```
+```bash
 accelerate launch --mixed_precision="fp16" \
                   --multi_gpu \
                   -m instructg2i.train \
@@ -189,7 +189,7 @@ accelerate launch --mixed_precision="fp16" \
 ```
 
 We provide an example for training InstructG2I on the ART graph:
-```
+```bash
 export CUDA_VISIBLE_DEVICES=6,7 
 accelerate launch --mixed_precision="fp16" \
                   --multi_gpu \
@@ -201,13 +201,13 @@ accelerate launch --mixed_precision="fp16" \
 ## Model Testing
 For quantitative evaluation of the InstructG2I model, you can specify a testing configuration file ```your_test_config.json``` and we provide a testing configuration template [here](https://github.com/PeterGriffinJin/InstructG2I/blob/main/config/test_template.json).
 
-```
+```bash
 python -m instructg2i.test --config config/your_test_config.json
 ```
 
 
 We provide an example for testing InstructG2I trained on the ART graph:
-```
+```bash
 python -m instructg2i.test --config config/test_art.json
 ```
 
