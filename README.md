@@ -1,7 +1,8 @@
 # InstructG2I: Synthesizing Images from Multimodal Attributed Graphs
 
-<a href='https://ip-adapter.github.io'><img src='https://img.shields.io/badge/Project-Page-green'></a> 
-<a href='https://arxiv.org/abs/2308.06721'><img src='https://img.shields.io/badge/Technique-Report-red'></a>
+<a href=''><img src='https://img.shields.io/badge/Project-Page-green'></a> 
+<a href=''><img src='https://img.shields.io/badge/Technique-Report-red'></a>
+<a href='https://huggingface.co/PeterJinGo/VirtualArtist'><img src='https://img.shields.io/badge/Released-Model-blue'></a>
 
 ---
 
