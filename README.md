@@ -102,7 +102,7 @@ res_grid.show()
 
 <!-- ![arch](figs/example2.png) -->
 <div align="center">
-    <img src="figs/example2.png" alt="arch" width="300" height="300" />
+    <img src="figs/example2.png" alt="arch" width="400" height="400" />
 </div>
 
 ## Download Models
@@ -165,7 +165,7 @@ Inside both ```train/``` and ```test/``` folders, there is a ```metadata.jsonl``
 
 <!-- ![arch](figs/playground2.png) -->
 <div align="center">
-    <img src="figs/playground2.png" alt="arch" width="400" height="300" />
+    <img src="figs/playground2.png" alt="arch" width="530" height="400" />
 </div>
 
 ### Generate a picture by providing multiple graph guidance
@@ -174,7 +174,7 @@ Inside both ```train/``` and ```test/``` folders, there is a ```metadata.jsonl``
 
 <!-- ![arch](figs/playground3.png) -->
 <div align="center">
-    <img src="figs/playground3.png" alt="arch" width="350" height="350" />
+    <img src="figs/playground3.png" alt="arch" width="450" height="450" />
 </div>
 
 ## Model Training
