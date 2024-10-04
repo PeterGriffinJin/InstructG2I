@@ -55,8 +55,10 @@ image_gen = pipeline(prompt=text_prompt, neighbor_image=neighbor_image, neighbor
 image_gen.show()
 ```
 
-![arch](figs/example.png)
-
+<!-- ![arch](figs/example.png) -->
+<div align="center">
+    <img src="figs/example.png" alt="arch" width="300" height="300" />
+</div>
 
 Generate a picture called *a house in the snow* combining the style of Claude Monet <img src="figs/artist.svg" width="30" height="30" /> and my little brother <img src="figs/baby.svg" width="30" height="30" />.
 ```
@@ -97,8 +99,10 @@ res_grid = image_grid(image_gens, len(scale_as), len(scale_bs))
 res_grid.show()
 ```
 
-![arch](figs/example2.png)
-
+<!-- ![arch](figs/example2.png) -->
+<div align="center">
+    <img src="figs/example2.png" alt="arch" width="300" height="300" />
+</div>
 
 ## Download Models
 
@@ -148,20 +152,29 @@ Inside both ```train/``` and ```test/``` folders, there is a ```metadata.jsonl``
 
 [virtual_artist.ipynb](https://github.com/PeterGriffinJin/InstructG2I/blob/main/examples/virtual_artist.ipynb)
 
-![arch](figs/playground1.png)
+<!-- ![arch](figs/playground1.png) -->
+<div align="center">
+    <img src="figs/playground1.png" alt="arch" width="300" height="300" />
+</div>
 
 
 ### Generate a picture by controlling the guidance weight from text and graph
 
 [virtual_artist_TG_guidance.ipynb](https://github.com/PeterGriffinJin/InstructG2I/blob/main/examples/virtual_artist_TG_guidance.ipynb)
 
-![arch](figs/playground2.png)
+<!-- ![arch](figs/playground2.png) -->
+<div align="center">
+    <img src="figs/playground2.png" alt="arch" width="400" height="300" />
+</div>
 
 ### Generate a picture by providing multiple graph guidance
 
 [virtual_artist_multiG_guidance.ipynb](https://github.com/PeterGriffinJin/InstructG2I/blob/main/examples/virtual_artist_multiG_guidance.ipynb)
 
-![arch](figs/playground3.png)
+<!-- ![arch](figs/playground3.png) -->
+<div align="center">
+    <img src="figs/playground3.png" alt="arch" width="350" height="350" />
+</div>
 
 ## Model Training
 For training, you can make a training configuration file ```your_train_config.json``` and we provide a training configuration template [here](https://github.com/PeterGriffinJin/InstructG2I/blob/main/config/train_template.json).
