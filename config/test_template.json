@@ -1,0 +1,13 @@
+{
+    "model_dir": "/path/to/your/model",
+    "test_dir": "/path/to/your/test/data",
+    "device": "cuda", 
+    "cache_dir": "/shared/data/bowenj4/hf-cache",
+    "resolution": 256,
+    "neighbor_num": 5,
+    "num_inference_steps": 100,
+    "diffusion_infer_batch_size": 8,
+    "score_batch_size": 8,
+    "max_index": 1000,
+    "neighbor_key": "neighbors"
+}

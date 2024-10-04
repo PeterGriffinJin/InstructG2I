@@ -1,0 +1,13 @@
+{
+    "model_dir": "/shared/data/bowenj4/multimodal-graph/checkpoint/ART500K/clipqformer2img",
+    "test_dir": "/shared/data/bowenj4/multimodal-graph/data/ART500K/test",
+    "device": "cuda:7", 
+    "cache_dir": null,
+    "resolution": 256,
+    "neighbor_num": 5,
+    "num_inference_steps": 100,
+    "diffusion_infer_batch_size": 32,
+    "score_batch_size": 32,
+    "max_index": 1000,
+    "neighbor_key": "neighbors"
+}
