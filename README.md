@@ -45,7 +45,7 @@ from PIL import Image
 from instructg2i import InstructG2IPipeline, get_neighbor_transforms
 
 text_prompt = 'a mountain in the blue sky'  # a man playing soccer, a man playing piano
-neighbor_pic_dir = '/shared/data/bowenj4/opensource/InstructG2I/examples/monet_pictures'
+neighbor_pic_dir = 'examples/monet_pictures'
 
 neighbor_transforms = get_neighbor_transforms(resolution=256)
 pipeline = InstructG2IPipeline.from_pretrained("PeterJinGo/VirtualArtist", neighbor_num=5, device='cuda:0')
@@ -58,7 +58,7 @@ image_gen.show()
 ![arch](figs/example.png)
 
 
-Generate a picture called *a house in the snow* combining the style of Claude Monet and my little brother.
+Generate a picture called *a house in the snow* combining the style of Claude Monet and my little brother <img src="figs/baby.svg" width="30" height="30" />.
 ```
 import os
 from PIL import Image
@@ -73,8 +73,8 @@ scale_as = [0, 3, 10]
 scale_bs = [0, 5, 15]
 
 # read the sampled neighbors
-path1 = "/shared/data/bowenj4/opensource/InstructG2I/examples/monet_pictures"
-path2 = "/shared/data/bowenj4/opensource/InstructG2I/examples/children_pictures"
+path1 = "examples/monet_pictures"
+path2 = "examples/children_pictures"
 neighbor_images = [[neighbor_transforms(Image.open(os.path.join(path1, n_file)).convert("RGB")) for n_file in os.listdir(path1)],
                    [neighbor_transforms(Image.open(os.path.join(path2, n_file)).convert("RGB")) for n_file in os.listdir(path2)]]
 neighbor_masks = [[1,1,1,1,1],
