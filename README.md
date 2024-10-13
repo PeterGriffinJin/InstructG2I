@@ -214,5 +214,10 @@ python -m instructg2i.test --config config/test_art.json
 ## Citations
 If you find InstructG2I useful for your research and applications, please cite using this BibTeX:
 ```bibtex
-
+@article{jin2024instructg2i,
+  title={InstructG2I: Synthesizing Images from Multimodal Attributed Graphs},
+  author={Jin, Bowen and Pang, Ziqi and Guo, Bingjun and Wang, Yu-Xiong and You, Jiaxuan and Han, Jiawei},
+  journal={arXiv preprint arXiv:2410.07157},
+  year={2024}
+}
 ```
