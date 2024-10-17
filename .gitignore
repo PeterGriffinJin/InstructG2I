@@ -104,10 +104,10 @@ venv.bak/
 .mypy_cache/
 
 # dataset
-*.jpg
+# *.jpg
 *.gz
 raw/
-pictures/
+# pictures/
 
 ###################################
 .vscode/
